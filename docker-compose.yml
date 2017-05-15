@@ -1,0 +1,9 @@
+version: '3'
+services:
+  postgres:
+    image: qnib/plain-postgres:local
+    deploy:
+      restart_policy:
+        condition: on-failure
+    environment:
+      - POSTGRES_PASSWORD=password
