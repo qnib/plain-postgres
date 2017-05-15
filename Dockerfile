@@ -1,6 +1,7 @@
 FROM qnib/alplain-init
 
 ENV PGDATA=/var/lib/pgsql/data/ \
+    ENTRY_USER=postgres \
     PSQL_BIND_ADDR=*
 RUN apk add --update postgresql \
  && mkdir -p /var/lib/pgsql/data/ \
